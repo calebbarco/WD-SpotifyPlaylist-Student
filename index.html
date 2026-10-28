@@ -61,6 +61,9 @@
           <option value="focus">Focus</option>
           <option value="chill">Chill</option>
           <option value="hype">Hype</option>
+          <option value="dreamy">Dreamy</option>
+          <option value="party">Party</option>
+          <option value="rainy">Rainy Day</option>
         </select>
 
         <!-- ADDED: Listening Mode Selector
@@ -70,6 +73,8 @@
         <select id="mode-selector" class="form-select w-50 mb-3">
           <option value="quickPlay">Quick Play (top 3 songs)</option>
           <option value="fullSession">Full Session (all songs + bonus track)</option>
+          <option value="singleTrack">Single Track Preview</option>
+          <option value="bonusTracks">Bonus Tracks Only</option>
         </select>
 
         <!-- Feedback -->
@@ -84,7 +89,23 @@
 
         <!-- Playlist -->
         <div class="playlist-box mt-4">
-          <h4>Playlist</h4>
+          <div class="playlist-header">
+            <h4>Playlist</h4>
+            <div class="playlist-actions">
+              <button id="shuffle-button" class="playlist-action" type="button" disabled>
+                Shuffle
+              </button>
+              <button
+                id="repeat-toggle"
+                class="repeat-toggle"
+                type="button"
+                aria-pressed="false"
+                aria-label="Repeat playlist: off"
+              >
+                Repeat: Off
+              </button>
+            </div>
+          </div>
           <p class="remove-instructions">Click a song to remove it from your playlist.</p>
           <div id="playlist-container"></div>
         </div>
